@@ -3,8 +3,6 @@ body {
 }
 
 
-
-
 .title {
   color: black;
   font-weight: 800;
@@ -14,52 +12,6 @@ body {
 .text-shadow {
   text-shadow: 0 0 1px #0dcaf0;
 }
-
-
-
-#slide-1,
-#slide-2,
-#slide-3 {
-  position: relative;
-  overflow: hidden;
-}
-
-.cover-1,
-.cover-2,
-.cover-3 {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-  z-index: 3000;
-}
-
-.cover-1 {  
-  opacity: 0.6;
-  background-image: url('../img/galaxy.jpg');
-}
-.cover-2 {
-  opacity: 0.15;
-  background-image: url('../img/library.jpg');
-}
-.cover-3 {
-  opacity: 0.15;
-  background-image: url('../img/map.png');
-  width:100%;
-}
-
-
-
-.cover-text {
-  color: black;
-
-  text-shadow: 0 0 20px white;
-  position: absolute;
-  left: 5%;
-  top: 10%;
-
-}
-
 
 
 input, select {
@@ -102,15 +54,16 @@ label:focus,
   text-decoration-thickness: 0.3rem;
 }
 
-.my-div {
+*/
+
+.cdiv {
   border: 1px solid #0dcaf0;
   border-radius: 15px;
   padding: 15px;
   background-color: #dee2e6;
-  box-shadow: 0px 1px 3px darkorange;
+  box-shadow: 0px 1px 3px gray;
 }
 
-*/
 
 
 .navbar .nav-link {

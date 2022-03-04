@@ -44,14 +44,20 @@
     </nav>
 
 
-
-
-    <main id="main-content" class="p-5 mt-5">
+    <main id="root" class="p-5">
       {% block main %}{% endblock %}
     </main>
 
+
+    <script src="static/js/web3.min.js"></script>
+    <script src="static/js/web3-utils.js"></script>
+
+    <script src="static/js/moralis.min.js"></script>
+
     <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/utils-dom.js"></script>
+    <script src="static/js/init.js"></script>
+
     {% block scripts %}{% endblock %}
   </body>
 </html>

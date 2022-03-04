@@ -1,7 +1,13 @@
 from flask import Flask, render_template, request
+from dotenv import load_dotenv
 from utils import utils
 
+
 app = Flask(__name__)
+app.config.from_pyfile('settings.py')
+
+load_dotenv('.env')
+
 
 @app.route("/")
 @app.route("/index")
@@ -25,4 +31,5 @@ def internal_error(error):
     return render_template("error.html", error_num=500), 500
 
 if __name__ == "__main__":
+    
     app.run(debug=True)

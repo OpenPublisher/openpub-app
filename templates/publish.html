@@ -1,13 +1,73 @@
 {% extends "_base.html" %}
 
+{% block scripts %}
+<script src="static/js/moralis-utils.js"></script>
+{% endblock %}
+
+
 {% block main %}
 
+<div class="cdiv">
+
+    <h4>Publication details</h4>
+
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Upload file</label>
+        <div class="col-sm-10">
+        <input class="form-control" type="file" id="pub-file" accept=".csv,.CSV,.json,.JSON,.zip,.ZIP">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Title</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="pub-title" placeholder="Enter publication title here...">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="pub-description" placeholder="Enter publication description here...">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label class="col-sm-2 col-form-label">Authors</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="pub-authors" placeholder="Enter comma separated list of authors here...">
+        </div>
+    </div>
+
+</div>
 
 
-    <h4>Upload a file</h4>
 
 
-<input class="form-control" type="file" id="file-upload" accept=".csv,.CSV,.json,.JSON">
+
+
+<div class="alert alert-danger" role="alert" id="error-alert" style="display:none;">
+    <div class="d-flex justify-content-between">
+        <span></span>
+        <span id="error-alert-text">Some shit went down</span>
+        <button type="button" class="btn btn-outline-danger" data-btntype="close-warning">&#10005;</button>
+    </div>
+</div>
+
+
+<div class="my-3">
+
+<button class="btn btn-lg btn-info" id="btn-login">Login with MetaMask</button>
+
+
+</div>
+
+<div class="my-3">
+
+    <button class="btn btn-lg btn-outline-info" id="btn-get-stats">Get stats</button>
+    
+    
+    </div>
 
 
 {% endblock %}
