@@ -16,32 +16,30 @@
   <body>
 
 
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-lg bg-secondary sticky-top p-0">
+    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{{url_for('index') }}">
-          <i class="bi bi-book"></i> OpenPub
-        </a>
-        <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse">
+        <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-book"></i> OpenPub</a>
+        <button class="navbar-toggler btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
           <i class="bi bi-list"></i>
         </button>
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="{{url_for('publish') }}">PUBLISH</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{url_for('search') }}">SEARCH</a>
-              </li>
-            </ul>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarcollapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link px-3" href="{{url_for('publish') }}"><i class="bi bi-journal-check"></i> Publish</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="{{ url_for('search') }}"><i class="bi bi-search"></i> Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" target="_blank" href="https://github.com/OpenPublisher"><i class="bi bi-github"></i> View code</a>
+            </li>            
+          </ul>
         </div>
+      </div>
     </nav>
+
+
+
 
 
     <main id="root" class="p-5">
