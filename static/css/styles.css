@@ -5,16 +5,19 @@
 
 
 .navbar-brand {
-  color: #0d6efd;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 1rem;
-  font-weight: 800;
+  color: black;
+  padding-top: .7rem;
+  padding-bottom: .6rem;
+  font-size: 1.1rem;
+  font-weight: 900;
 }
 .navbar-brand:hover {
   color: #0d6efd;
+  /*
+  color: #0d6efd;
   border-bottom: 3px solid #0d6efd;
   margin-bottom: -3px;
+  */
 }
 
 
@@ -31,15 +34,19 @@
 }
 .navbar .nav-link:hover {
   color: #0d6efd;
+  
+  /*
+  color: black;
   border-bottom: 3px solid #0d6efd;
   margin-bottom: -3px;
+  */
   background-color: #dee2e6;
 }
 
 .cdiv {
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0px 0px 5px #6c757d;
+  box-shadow: 0px 0px 10px #6c757d;
 }
 
 

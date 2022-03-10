@@ -1,58 +1,26 @@
-const serverUrl = "https://mysaxj65vywx.usemoralis.com:2053/server";
-const appId = "iPXKdV96rgPUw4gJAxNnJw5gPRBKeGOwX8vFtQHZ";
-Moralis.start({ serverUrl, appId });
-
-
-dom.get("btn-login").addEventListener("click", login);
-dom.get("btn-get-stats").addEventListener("click", getStats);
-
-// get currently connected wallet
-const currentUserObj = Moralis.User.current();
-
-// if wallet is connected
-if (currentUserObj) {
-  const user = JSON.parse(JSON.stringify(currentUserObj));
-  console.log(user);
-  showAlert('login-success-alert', `You have successfully connected wallet address ${user['ethAddress']}`);
-  
-// if no wallet is connected
-} else {
-  console.log(`User not logged in`);
-};
 
 
 dom.get('submit-btn').addEventListener('click', () => {
-  alert("This functionality is under construction");
+  if (walletIsConnected()){
+    alert("This functionality is coming soon!");
+  } else {
+    dom.showAlert(msg="You must be connected to an Ethereum wallet to complete this step!", style="danger")
+  }
 });
 
 
-async function login() {
-  let user = Moralis.User.current();
-  if (!user) {
-    user = await Moralis.authenticate({signingMessage: "Log into OpenPublisher using MetaMask"}).then(function (user) {
-      console.log("logged in user:", user);
-      console.log(user.get("ethAddress"));
-      dom.get('btn-login').disabled = true;
-    }).catch(function (error) {
-      showAlert(id="error-alert", msg=error);
-    });
-  };
-};
-
-
-function getStats() {
-  const user = Moralis.User.current();
-  if (user) {
-    const query = new Moralis.Query("EthTransactions");
-    query.equalTo("from_address", user.get("ethAddress"));
-    query.find().then(r => {
-      console.log("user transactions:", r);
-    });
-  };
-};
-
-
-function showAlert(id, msg) {
-  dom.get(`${id}-msg`).innerHTML = msg;
-  dom.get(id).style.display = "block";
-};
+/*
+async function publish() {
+  let options = {
+    contractAddress: “0x356d2E7a0d592bAd95E86d19479c37cfdBb68Ab9”,
+    function Name: “newDonation”,
+    abi: [{"inputs":[{"internalType":"string","name":"note","type":"string"}],"name":"newDonation","outputs":[],"stateMutability":"payable","type":"function"}],
+    Params:{
+        Note: “Thanks for your work”
+    },
+    msgValue: Moralis.Units.ETH(0.1),
+  }
+  logout();
+  showAlert("You have successfully published!", style="success");
+ };
+ */

@@ -15,14 +15,15 @@
   <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-light sticky-top shadow">
+    <nav class="navbar navbar-expand-md bg-light sticky-top shadow">
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ url_for('index') }}"><i class="bi bi-book"></i> OpenPub</a>
         <button class="navbar-toggler btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse">
           <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarcollapse">
-          <ul class="navbar-nav me-auto">
+
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link px-3" href="{{url_for('publish') }}"><i class="bi bi-journal-check"></i> Publish</a>
             </li>
@@ -31,29 +32,30 @@
             </li>
             <li class="nav-item">
               <a class="nav-link px-3" target="_blank" href="https://github.com/OpenPublisher"><i class="bi bi-github"></i> View code</a>
-            </li>            
+            </li> 
           </ul>
+
+          <button type="button" id="connect-btn" class="btn btn-sm rounded-pill ms-auto p-2 m-1"></button>
+
         </div>
       </div>
     </nav>
 
 
 
-
-
-    <main id="root" class="p-5">
+    <main id="root" class="p-4">
+      <div id="alert-div" class="mb-4">
+      </div>
       {% block main %}{% endblock %}
     </main>
 
-
+    <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/web3.min.js"></script>
-    <script src="static/js/web3-utils.js"></script>
-
     <script src="static/js/moralis.min.js"></script>
 
-    <script src="static/js/bootstrap.bundle.min.js"></script>
+     
     <script src="static/js/utils-dom.js"></script>
-    <script src="static/js/init.js"></script>
+    <script src="static/js/init.js"></script>  
 
     {% block scripts %}{% endblock %}
   </body>

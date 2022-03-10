@@ -8,44 +8,10 @@
 {% block main %}
 
 
-<div class="alert alert-success mt-3" role="alert" id="login-success-alert" style="display:none;">
-    <div class="d-flex justify-content-between">
-        <span></span>
-        <span id='login-success-alert-msg'></span>
-        <button type="button" class="btn btn-outline-success" data-btntype="close-alert">&#10005;</button>
-    </div>
-</div>
-
-
-<div class="cdiv mt-3" id="login-div">
-    
-    <h4>Step 1: Connect your Ethereum wallet</h4>
-    <p>To interact with the OpenPub protocol, you must have an Ethereum wallet containing some Ether to pay the transaction fee.</p>
-    <button class="btn btn-lg btn-primary" id="btn-login">Connect</button>
-
-    <div class="alert alert-danger m-3" role="alert" id="error-alert" style="display:none;">
-        <div class="d-flex justify-content-between">
-            <span></span>
-            <span id="error-alert-msg">An error occured</span>
-            <button type="button" class="btn btn-outline-danger" data-btntype="close-alert">&#10005;</button>
-        </div>
-    </div>
-
-
-    <div class="my-3" style="display:none;">
-        <button class="btn btn-lg btn-secondary" id="btn-get-stats">Get stats</button>
-    </div>
-
-
-</div>
 
 
 
-
-
-<div class="cdiv mt-3" id="pub-details-div">
-
-    <h4>Step 2: Enter publication details</h4>
+    <h4>Enter publication details</h4>
     <p>This information will be sent to the OpenPub smart contract.</p>
 
     <div class="mb-3 row">
@@ -76,26 +42,8 @@
         </div>
     </div>
 
-</div>
 
-
-<div class="cdiv mt-3" id="login-div">
-    
-    <h4>Step 3: Submit your publication</h4>
-    <p>This will write your publication data to the blockchain and deposit a PUB token in your connected Ethereum wallet.</p>
-    <button class="btn btn-lg btn-primary" id="submit-btn">Submit</button>
-
-    <!--
-    <div class="alert alert-danger m-3" role="alert" id="error-alert" style="display:none;">
-        <div class="d-flex justify-content-between">
-            <span></span>
-            <span id="error-alert-text">An error occured</span>
-            <button type="button" class="btn btn-outline-danger" data-btntype="close-warning">&#10005;</button>
-        </div>
-    </div>
-    -->
-
-</div>
+    <button class="btn btn-lg btn-primary mt-3" id="submit-btn">Submit</button>
 
 
 

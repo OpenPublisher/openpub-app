@@ -71,7 +71,23 @@ const dom = {
     };
   },
 
+
+
+ showAlert(msg, style) {
+    const div = dom.get('alert-div');
+    div.innerHTML = "";
+    const alert = dom.make("div", {parent: div, classes:`"alert alert-${style} p-3 cdiv`});
+    const flex = dom.make("div", {parent: alert, classes: "d-flex justify-content-between"});
+    const span = dom.make("span", {parent: flex, innerHTML: msg});
+    const btn = dom.make("button", {parent: flex, classes:`btn btn-lg btn-outline-${style} border-0 bg-transparent`, innerHTML:`&#10005;`});
+    btn.addEventListener("click", () => {div.innerHTML = ""});
+  },
+  
+
+
 };
+
+
 
 dom.showLoading = function showLoading(id){
   dom.make('div', {
@@ -87,7 +103,7 @@ dom.hideLoading = function (id) {
   dom.get(id).innerHTML = "";
 };
 
-
+/*
 
 // send POST request to retrieve data from the server
 async function postData(url="", data={}) {
@@ -104,3 +120,4 @@ async function getData(url) {
   const response = await fetch(url, {method: 'GET'});
   return response.json();
 };
+*/
